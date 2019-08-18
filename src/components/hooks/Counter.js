@@ -1,0 +1,19 @@
+import React, { useEffect, useState } from 'react';
+
+export default function Counter() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button type="button" onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}

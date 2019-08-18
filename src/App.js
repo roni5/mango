@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 // import rootReducer from './reducers/index';
 import { connect } from 'react-redux';
 import Todos from './components/Todos';
+import Counter from './components/hooks/Counter';
+import EditableItem from './components/hooks/EditableItem';
 import './App.css';
 
 // function App() {
@@ -35,6 +37,8 @@ class App extends Component {
       <div className="todo-app container">
         <h1 className="center blue-text">Todo's</h1>
         <Todos todos={this.state.todos} deleteTodo={this.deleteTodo} />
+        <Counter />
+        <EditableItem />
       </div>
     );
   }
